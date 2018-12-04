@@ -8,14 +8,15 @@ var startMinutes = now.getMinutes()+(now.getSeconds()/60)
 var startHours = now.getHours()+(now.getSeconds()/3600)
 console.log(startHours, startMinutes, startSeconds)
 
-secondHand.style.transform = "rotate(" + startSeconds + "deg)";
-minuteHand.style.transform = "rotate(" + startMinutes + "deg)";
-hourHand.style.transform = "rotate(" + startHours + "deg)";
+secondHand.style.transform = "rotate(" + startSeconds*6 + "deg)";
+minuteHand.style.transform = "rotate(" + startMinutes*6 + "deg)";
+hourHand.style.transform = "rotate(" + startHours*30 + "deg)";
 
 var secondDegrees = startSeconds*6;
 var minuteDegrees = startMinutes*6;
 var hourDegrees = startHours*30;
 
+document.addEventListener('DOMContentLoaded',function(){
 setInterval(function(){
 	console.log("Tick");
 	tickSecond();
@@ -24,6 +25,7 @@ setInterval(function(){
 	var actualTime = new Date();
 	console.log(actualTime)
 }, 1000);
+})
 
 function tickSecond(){
 	secondDegrees += 6;
