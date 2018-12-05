@@ -24,7 +24,7 @@ setInterval(function(){
 	tickHour();
 	var actualTime = new Date();
 	console.log(actualTime)
-}, 1000);
+}, 10);
 })
 
 function tickSecond(){
@@ -38,7 +38,7 @@ function tickMinute(){
 }
 
 function tickHour(){
-	hourDegrees += (.1/60);
+	hourDegrees += (.1/12);
 	hourHand.style.transform = "rotate(" + hourDegrees + "deg)";
 
 }
