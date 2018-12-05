@@ -24,7 +24,7 @@ setInterval(function(){
 	tickHour();
 	var actualTime = new Date();
 	console.log(actualTime)
-}, 10);
+}, 1000);
 })
 
 function tickSecond(){
